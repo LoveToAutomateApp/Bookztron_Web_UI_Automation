@@ -24,7 +24,7 @@
     <li> clone the project on local instance</li>
     <li> change directory to project workspace/folder</li>
     <li> first pull the last commit changes with following command: git pull</li>
-    <li> install all dependencies related to project with following command: git pull</li>
+    <li> install all dependencies related to project with following command: git i</li>
     <li> to run test suit run following command in npm test</li>
 </ul>
    
