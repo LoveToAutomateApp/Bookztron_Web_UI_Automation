@@ -1,0 +1,24 @@
+{
+    "staging_url":"http://localhost:3000/",    
+     "url":{
+        "home_url":"http://localhost:3000/",
+        "login_url":"http://localhost:3000/login",
+        "shop_url":"http://localhost:3000/shop",
+        "wishlist_url":"http://localhost:3000/wishlist",
+        "cart_url":"http://localhost:3000/cart",
+        "order_url":"http://localhost:3000/orders"
+     },
+    "header_elements":{
+        "brand_heading":"div.left-topbar-container > a:nth-Child(1)",
+        "login_link":"div.right-topbar-container > a:nth-Child(1)",
+        "shop_link":"div.right-topbar-container > a:nth-Child(2)",
+        "wishlist_link":"div.right-topbar-container > a:nth-Child(3)",
+        "cart_link":"div.right-topbar-container > a:nth-Child(4)",
+        "order_link":"div.right-topbar-container > a:nth-Child(5)",
+        "top_header":"div#root > div > div.top-bar"
+    },
+
+    "header_data":{
+      "label_brand_heading":"Bookztron"
+    }
+}
