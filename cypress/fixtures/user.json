@@ -1,24 +1,49 @@
 {
-    "staging_url":"http://localhost:3000/",    
-     "url":{
-        "home_url":"http://localhost:3000/",
-        "login_url":"http://localhost:3000/login",
-        "shop_url":"http://localhost:3000/shop",
-        "wishlist_url":"http://localhost:3000/wishlist",
-        "cart_url":"http://localhost:3000/cart",
-        "order_url":"http://localhost:3000/orders"
-     },
-    "header_elements":{
-        "brand_heading":"div.left-topbar-container > a:nth-Child(1)",
-        "login_link":"div.right-topbar-container > a:nth-Child(1)",
-        "shop_link":"div.right-topbar-container > a:nth-Child(2)",
-        "wishlist_link":"div.right-topbar-container > a:nth-Child(3)",
-        "cart_link":"div.right-topbar-container > a:nth-Child(4)",
-        "order_link":"div.right-topbar-container > a:nth-Child(5)",
-        "top_header":"div#root > div > div.top-bar"
-    },
+  "staging_url": "http://localhost:3000/",
+  "url": {
+    "home_url": "http://localhost:3000/",
+    "login_url": "http://localhost:3000/login",
+    "shop_url": "http://localhost:3000/shop",
+    "wishlist_url": "http://localhost:3000/wishlist",
+    "cart_url": "http://localhost:3000/cart",
+    "order_url": "http://localhost:3000/orders"
+  },
 
-    "header_data":{
-      "label_brand_heading":"Bookztron"
+  "header_elements": {
+    "brand_heading": "div.left-topbar-container > a:nth-Child(1)",
+    "login_link": "div.right-topbar-container > a:nth-Child(1)",
+    "shop_link": "div.right-topbar-container > a:nth-Child(2)",
+    "wishlist_link": "div.right-topbar-container > a:nth-Child(3)",
+    "cart_link": "div.right-topbar-container > a:nth-Child(4)",
+    "order_link": "div.right-topbar-container > a:nth-Child(5)",
+    "top_header": "div#root > div > div.top-bar",
+    "navigation_menu_count_list": "div#root > div.App > div > div.right-topbar-container > a"
+  },
+
+  "header_data": {
+    "label_brand_heading": "Bookztron",
+    "label_login": "login",
+    "label_shop": "shop",
+    "label_wishlist": "wishlist",
+    "label_cart": "cart",
+    "label_order": "order"
+  },
+
+  "home_page": {
+    "home_banner_image_element": {
+      "banner_image": "img.home-page-background-img"
+    },
+    "articles_section_elements": {
+      "genere_card_list": "div.genre-cards-container > a",
+      "explore_all_button": "div.home-component-container > a > button.solid-secondary-btn.homepage-explore-all-btn"
+    },
+    "article_section_data": {
+      "label_fiction": "Fiction",
+      "label_thriller": "Thriller",
+      "label_tech": "Tech",
+      "label_philosophy": "Philosophy",
+      "label_romance": "Romance",
+      "label_manga": "Manga"
     }
+  }
 }

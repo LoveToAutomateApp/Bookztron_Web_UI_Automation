@@ -46,6 +46,10 @@ describe("Top Header Integration Checklist", () => {
     cy.visit(user.staging_url);
   });
 
+  it("verify count of navigation menu links", () => {
+    header.navigation_menu_list().should("have.length", 5);
+  });
+
   it("verify click on brand heading should redirect to home from login page", () => {
     header.login_link().click();
     header.brand_heading_link().click();
