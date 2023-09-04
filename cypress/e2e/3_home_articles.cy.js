@@ -1,4 +1,4 @@
-import Home_Articles_Page_Object from "../support/header/Home_Articles_Page_Object";
+import Home_Articles_Page_Object from "../support/home/Home_Articles_Page_Object";
 const user = require("../fixtures/user.json");
 //const { defineConfig } = require("cypress");
 describe("Bookztron App E2E Test", () => {
@@ -6,6 +6,8 @@ describe("Bookztron App E2E Test", () => {
   beforeEach(() => {
     cy.visit(user.staging_url);
   });
+
+  // ------------------- Home page UI checklist ----------------------------->
 
   it("verify banner image is not broken", () => {
     hapo
@@ -37,5 +39,49 @@ describe("Bookztron App E2E Test", () => {
 
   it("verify explore button should be visible, should display cursor as pointer", () => {
     hapo.explore_all_button_ui_validation();
+  });
+
+  //------------------------- Home page integration checklist ------------------->
+
+  it("verify click on fiction category option should redirect to shop page, fiction category should be checked, one star and above rating should be enabled, include only out of stock product should be checked ", () => {
+    hapo.click_on_home_genere_category(
+      user.home_page.article_section_data.label_fiction
+    );
+  });
+
+  it("verify click on thriller category should redirect to shop page, thriller category should be checked, one star and above rating should be enabled, include only out of stock product should be checked", () => {
+    hapo.click_on_home_genere_category(
+      user.home_page.article_section_data.label_thriller
+    );
+  });
+
+  it("verify click on tech category should redirect to shop page, tech category should be checked, one star and above rating should be enabled, include only out of stock product should be checked", () => {
+    hapo.click_on_home_genere_category(
+      user.home_page.article_section_data.label_tech
+    );
+  });
+
+  it("verify click on philosophy category should redirect to shop page, philosophy category should be checked, one star and above rating should be enabled, include only out of stock product should be checked", () => {
+    hapo.click_on_home_genere_category(
+      user.home_page.article_section_data.label_philosophy
+    );
+  });
+
+  it("verify click on romance category should redirect to shop page, romance category should be checked, one star and above rating should be enabled, include only out of stock product should be checked", () => {
+    hapo.click_on_home_genere_category(
+      user.home_page.article_section_data.label_romance
+    );
+  });
+
+  it("verify click on manga category should redirect to shop page, manga category should be checked, one star and above rating should be enabled, include only out of stock product should be checked", () => {
+    hapo.click_on_home_genere_category(
+      user.home_page.article_section_data.label_manga
+    );
+  });
+
+  it("verify click on explore all button should redirect to shop page, all category options should be checked, one star and above rating should be enabled, include only out of stock product should be checked", () => {
+    hapo.click_on_home_genere_category(
+      user.home_page.article_section_data.label_explore_all
+    );
   });
 });

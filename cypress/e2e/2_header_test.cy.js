@@ -8,6 +8,8 @@ describe("Top Header UI Checklist", () => {
     cy.visit(user.staging_url);
   });
 
+  //--------------------- Header UI Checklist -------------------------->
+
   it("verify brand heading should be visible, should display cursor as pointer, should be an link, link value should not be empty", () => {
     header.element_ui_validation("brand_heading");
   });
@@ -37,7 +39,7 @@ describe("Top Header UI Checklist", () => {
   });
 });
 
-//----------------------- Integration -------------------------------------->
+//----------------------- Header Integration Checklist -------------------------------------->
 
 describe("Top Header Integration Checklist", () => {
   const header = new Header_Page_Object();

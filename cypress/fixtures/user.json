@@ -43,7 +43,30 @@
       "label_tech": "Tech",
       "label_philosophy": "Philosophy",
       "label_romance": "Romance",
-      "label_manga": "Manga"
+      "label_manga": "Manga",
+      "label_explore_all": "Explore All"
     }
+  },
+
+  "shop_page_elements": {
+    "fiction_checkbox": "input#fiction-checkbox",
+    "thriller_checkbox": "input#thriller-checkbox",
+    "tech_checkbox": "input#tech-checkbox",
+    "philosophy_checkbox": "input#philosophy-checkbox",
+    "romance_checkbox": "input#romance-checkbox",
+    "manga_checkbox": "input#manga-checkbox",
+    "rating_items_list": "div.product-page-rating-radio > div.rating-items",
+    "include_out_of_stock_checkbox": "div.additional-filters > div > input#out-of-stock-checkbox",
+    "fast_delivery_only_checkbox": "div.additional-filters > div > input#fast-delivery-available-checkbox"
+  },
+
+  "shop_page_data": {
+    "label_fiction": "Fiction",
+    "label_thriller": "Thriller",
+    "label_tech": "Tech",
+    "label_philosophy": "Philosophy",
+    "label_romance": "Romance",
+    "label_manga": "Manga",
+    "label_default": "default"
   }
 }
