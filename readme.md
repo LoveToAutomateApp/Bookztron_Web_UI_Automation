@@ -1,4 +1,6 @@
-<h2> Test Important Files </h2>
+<h2>Test Case File</h2>
+<a href="https://docs.google.com/spreadsheets/d/1szy9pLfF82dR_qDUb0l1EVGtp08nODSgI3ZgJYVvEcA/edit#gid=864870982">Click Here on Link</a>
+<h2> Test Script Important Files </h2>
     <ul>
         <li>Package.json - where all test configurations details are saved</li>
         <li>fixtures - where all locators and test data are saved</li>
@@ -25,7 +27,6 @@
     <li> clone the project on local instance</li>
     <li> change directory to project workspace/folder</li>
     <li> first pull the last commit changes with following command: git pull</li>
-    <li> install all dependencies related to project with following command: git i</li>
+    <li> install all dependencies related to project with following command: npm i</li>
     <li> to run test suit run following command in npm test</li>
 </ul>
-   
