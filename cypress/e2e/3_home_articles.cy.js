@@ -9,7 +9,7 @@ describe("Bookztron App E2E Test", () => {
 
   // ------------------- Home page UI checklist ----------------------------->
 
-  it("verify banner image is not broken", () => {
+  it("TID001 - verify banner image is not broken", () => {
     hapo
       .get_banner_image()
       .should("be.visible")
@@ -18,11 +18,11 @@ describe("Bookztron App E2E Test", () => {
       });
   });
 
-  it("verify list count under generes article section", () => {
+  it("TID002 - verify list count under generes article section", () => {
     hapo.get_articles_list().should("have.length", 6);
   });
 
-  it("verify fiction, thriller, tech, philosophy, romance, managa is present under gener article section", () => {
+  it("TID003 - verify fiction, thriller, tech, philosophy, romance, managa is present under gener article section", () => {
     let listItems = [
       user.home_page.article_section_data.label_fiction,
       user.home_page.article_section_data.label_thriller,
@@ -37,7 +37,7 @@ describe("Bookztron App E2E Test", () => {
     });
   });
 
-  it("verify explore button should be visible, should display cursor as pointer", () => {
+  it("TID004 - verify explore button should be visible, should display cursor as pointer", () => {
     hapo.explore_all_button_ui_validation();
   });
 
@@ -84,4 +84,68 @@ describe("Bookztron App E2E Test", () => {
       user.home_page.article_section_data.label_explore_all
     );
   });
+
+  it("verify count of new arrival list should be 4", () => {
+    hapo.get_new_articles_book_list().should("have.length", 4);
+  });
+
+  it("verify books should be new arrival", () => {
+    for (let i = 1; i < 5; i++) {
+      hapo.get_new_articles_book_badge(i);
+    }
+  });
+
+  it("verify to add 1 book to wishlist without signin, should display toaster prompting to signin", () => {
+    for (let i = 1; i < 2; i++) {
+      hapo.get_new_arrival_book_add_to_wishlist_without_signin(i);
+    }
+  });
+
+  it("verify to add 2 books to wishlist without signin, should display toaster prompting to signin", () => {
+    for (let i = 1; i < 3; i++) {
+      hapo.get_new_arrival_book_add_to_wishlist_without_signin(i);
+    }
+  });
+
+  it("verify to add 3 books to wishlist without signin should display toaster prompting to signin", () => {
+    for (let i = 1; i < 4; i++) {
+      hapo.get_new_arrival_book_add_to_wishlist_without_signin(i);
+    }
+  });
+
+  it("verify to add all books to wishlist without signin should display toaster prompting to signin", () => {
+    for (let i = 1; i < 5; i++) {
+      hapo.get_new_arrival_book_add_to_wishlist_without_signin(i);
+    }
+  });
+
+  it("verify to add 1 book to wishlist with signin  should display 1 book into wishlist", () => {
+    for (let i = 1; i < 2; i++) {
+      hapo.get_new_arrival_book_add_to_wishlist_with_signin(i);
+    }
+  });
+
+  it("verify to add 2 book to wishlist with signin should display 2 books into wishlist", () => {
+    for (let i = 1; i < 3; i++) {
+      hapo.get_new_arrival_book_add_to_wishlist_with_signin(i);
+    }
+  });
+
+  it("verify to add 3 books to wishlist with signin should display 3 books into wishlist", () => {
+    for (let i = 1; i < 4; i++) {
+      hapo.get_new_arrival_book_add_to_wishlist_with_signin(i);
+    }
+  });
+
+  it("verify to add all books into wishlist with signin should display 4 books into wishlist", () => {
+    for (let i = 1; i < 5; i++) {
+      hapo.get_new_arrival_book_add_to_wishlist_with_signin(i);
+    }
+  });
+
+  // it("verify new arrival book status not to be out of stock", () => {});
+
+  // it("verify to add the stranger book into wishlist", () => {});
+
+  // it("verify to remove stranger book from wishlist through home page", () => {});
 });

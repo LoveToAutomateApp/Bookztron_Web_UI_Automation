@@ -1,17 +1,29 @@
 {
   "staging_url": "http://localhost:3000/",
   "url": {
-    "home_url": "http://localhost:3000/",
+    "home_url": "http://localhost:3000/#",
     "login_url": "http://localhost:3000/login",
     "shop_url": "http://localhost:3000/shop",
     "wishlist_url": "http://localhost:3000/wishlist",
     "cart_url": "http://localhost:3000/cart",
-    "order_url": "http://localhost:3000/orders"
+    "order_url": "http://localhost:3000/orders",
+    "contact_url": "http://localhost:3000/contact",
+    "about_url": "http://localhost:3000/about",
+    "careers_url": "http://localhost:3000/careers",
+    "gift_cards_url": "http://localhost:3000/giftcards",
+    "payment_url": "https://localhost:3000/payment",
+    "shipping_url": "https://localhost:3000/shipping",
+    "cancellation_and_return_url": "https://localhost:3000/cancellation",
+    "faq_url": "https://localhost:3000/faqs",
+    "linkedin_url": "https://www.linkedin.com/in/naman-saxena-5460b3188/",
+    "github_url": "https://github.com/Naman-Saxena1",
+    "twitter_url": "https://twitter.com/NamanSa83962307?s=08",
+    "instagram_url": "https://www.instagram.com/naman_saxena98/"
   },
 
   "header_elements": {
     "brand_heading": "div.left-topbar-container > a:nth-Child(1)",
-    "login_link": "div.right-topbar-container > a:nth-Child(1)",
+    "login_or_logout_link": "div.right-topbar-container > a:nth-Child(1) > button",
     "shop_link": "div.right-topbar-container > a:nth-Child(2)",
     "wishlist_link": "div.right-topbar-container > a:nth-Child(3)",
     "cart_link": "div.right-topbar-container > a:nth-Child(4)",
@@ -22,11 +34,47 @@
 
   "header_data": {
     "label_brand_heading": "Bookztron",
-    "label_login": "login",
+    "label_login": "Login",
     "label_shop": "shop",
     "label_wishlist": "wishlist",
     "label_cart": "cart",
     "label_order": "order"
+  },
+
+  "footer_elements": {
+    "footer_links_list": "div.footer-container > ul",
+    "contact_us": "div.footer-container > ul:nth-Child(1) > li:nth-Child(2) > a",
+    "about_us": "div.footer-container > ul:nth-Child(1) > li:nth-Child(3) > a",
+    "careers": "div.footer-container > ul:nth-Child(1) > li:nth-Child(4) > a",
+    "gift_cards": "div.footer-container > ul:nth-Child(1) > li:nth-Child(5) > a",
+
+    "payments": "div.footer-container > ul:nth-child(2) > li:nth-Child(2) > a",
+    "shipping": "div.footer-container > ul:nth-child(2) > li:nth-Child(3) > a",
+    "cancellation_and_returns": "div.footer-container > ul:nth-child(2) > li:nth-Child(4) > a",
+    "faqs": "div.footer-container > ul:nth-child(2) > li:nth-Child(5) > a",
+
+    "linkedin_social_link": "div.footer-container > ul:nth-child(3) > li:nth-Child(2) > a",
+    "github_link": "div.footer-container > ul:nth-child(3) > li:nth-Child(3) > a",
+    "twitter_link": "div.footer-container > ul:nth-child(3) > li:nth-Child(4) > a",
+    "instagram_link": "div.footer-container > ul:nth-child(3) > li:nth-Child(5) > a"
+  },
+
+  "footer_data": {
+    "label_about": "ABOUT",
+    "label_help": "HELP",
+    "label_social": "SOCIALS",
+    "label_about_section_contact_us": "Contact us",
+    "label_about_section_about_us": "About us",
+    "label_about_section_careers": "Careers",
+    "label_about_section_gift_cards": "Gift Cards",
+    "label_help_section_payments": "Payments",
+    "label_help_section_shipping": "Shipping",
+    "label_help_section_cancellation_and_return": "Cancellation & Returns",
+    "label_help_section_faqs": "FAQs",
+    "label_social_section_linkedin": "Linkedin",
+    "label_social_section_github": "Github",
+    "label_social_section_twitter": "Twitter",
+    "label_social_section_instagram": "Instagram"
   },
 
   "home_page": {
@@ -45,6 +93,21 @@
       "label_romance": "Romance",
       "label_manga": "Manga",
       "label_explore_all": "Explore All"
+    },
+    "new_arrival_section_elements": {
+      "book_list": "div.new-arrivals-container > a",
+      "new_arrival_book_list": "div.new-arrivals-container > a > div > div.card-item-details > div.badge-on-card",
+      "toaster_message": "div.toasts-container.bottom-right > div > div",
+      "wishlist_added_items_list": "div.products-card-grid > a"
+    },
+    "new_arrival_section_date": {
+      "label_harry_potter_and_the_deathly_hollows": "Harry Potter and the Deathly Hollows",
+      "label_the_fault_in_our_stars": "The Fault In Our Stars",
+      "label_the_stranger": "The Stranger",
+      "label_attack_on_titan_volume_34": "Attack On Titan Volume 34",
+      "label_toaster_kindly_login": "Kindly Login",
+      "label_toaster_added_item": "Item successfully added to wishlist",
+      "label_toaster_removed_item": "Item successfully deleted from wishlist"
     }
   },
 
@@ -68,5 +131,15 @@
     "label_romance": "Romance",
     "label_manga": "Manga",
     "label_default": "default"
+  },
+
+  "sign_in_page_elements": {
+    "email_field": "input#user-auth-input-email",
+    "password_field": "input#user-auth-input-password",
+    "login_submit": "button.solid-success-btn"
+  },
+  "sign_in_page_data": {
+    "label_valid_email": "utekar29viraj@gmail.com",
+    "label_valid_password": "Viraj@123"
   }
 }

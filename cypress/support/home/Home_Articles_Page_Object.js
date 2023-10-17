@@ -1,4 +1,8 @@
+import Sign_In_Page_Object from "../signin/Sign_In_Page_Object";
+
 const user = require("../../fixtures/user.json");
+const login = new Sign_In_Page_Object();
+
 export default class Home_Articles_Page_Object {
   get_banner_image() {
     // will return banner image element from user.json file
@@ -139,6 +143,112 @@ export default class Home_Articles_Page_Object {
         elementText.includes(user.home_page.article_section_data.label_manga)
       ) {
         expect(true).to.be.true;
+      }
+    });
+  }
+
+  get_new_articles_book_list() {
+    return cy.get(user.home_page.new_arrival_section_elements.book_list);
+  }
+
+  get_new_articles_book_badge(rowIndex) {
+    cy.get(
+      "div.new-arrivals-container > a:nth-Child(" +
+        rowIndex +
+        ") > div > div > div.badge-on-card"
+    ).then(($val) => {
+      expect($val.text().replace("\n").replace("\t").toString().trim()).eq(
+        "New Arrival"
+      );
+    });
+  }
+
+  get_new_arrival_book_add_to_wishlist_without_signin(rowIndex) {
+    cy.get(user.header_elements.login_or_logout_link).then(($state) => {
+      let buttonTitle = $state.text().replace("\n").replace("\t").toString();
+      //checks user is in logged out state
+      if (buttonTitle.includes(user.header_data.label_login)) {
+        //clicks on 1 book wishlist under new arrivals section
+        cy.get(
+          "div.new-arrivals-container > a:nth-Child(" +
+            rowIndex +
+            ") > div > div.card-item-details > div.card-button > button"
+        ).click();
+        //validate toaster message
+        cy.get(
+          user.home_page.new_arrival_section_elements.toaster_message
+        ).then(($success) => {
+          let successText = $success
+            .text()
+            .replace("\n")
+            .replace("\t")
+            .toString();
+          if (
+            successText.includes(
+              user.home_page.new_arrival_section_date.label_toaster_kindly_login
+            )
+          ) {
+            expect(true).to.be.true;
+          }
+        });
+      }
+    });
+  }
+
+  get_new_arrival_book_add_to_wishlist_with_signin(rowIndex) {
+    cy.get(user.header_elements.login_or_logout_link).then(($state) => {
+      let stateVal = $state
+        .text()
+        .replace("\t")
+        .replace("\n")
+        .toString()
+        .trim();
+      if (stateVal.includes(user.header_data.label_login)) {
+        cy.get(user.header_elements.login_or_logout_link).click();
+        login.validate_user_sign_in_with_valid_credentials(
+          user.sign_in_page_data.label_valid_email,
+          user.sign_in_page_data.label_valid_password
+        );
+        cy.wait(2000);
+        cy.get(user.header_elements.brand_heading).click();
+        cy.wait(3000);
+        //add new arrival book to wishlist
+        cy.get(
+          "div.new-arrivals-container > a:nth-Child(" +
+            rowIndex +
+            ") > div > div.card-item-details > div.card-button > button"
+        ).click();
+        cy.wait(3000);
+        // validate toaster message
+        cy.get(
+          user.home_page.new_arrival_section_elements.toaster_message
+        ).then(($toaster) => {
+          let toasterMessage = $toaster
+            .text()
+            .replace("\t")
+            .replace("\n")
+            .toString()
+            .trim();
+          if (
+            toasterMessage.includes(
+              user.home_page.new_arrival_section_date.label_toaster_added_item
+            )
+          ) {
+            expect(true).to.be.true;
+          }
+        });
+
+        cy.wait(2000);
+        //remove added item from wishlist
+        cy.get(
+          "div.new-arrivals-container > a:nth-Child(" +
+            rowIndex +
+            ") > div > div.card-item-details > div.card-button > button"
+        ).click();
+
+        cy.wait(2000);
+        //logout as user
+        cy.get("div.right-topbar-container > button").click();
       }
     });
   }

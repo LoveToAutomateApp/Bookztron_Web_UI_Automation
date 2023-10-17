@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --spec cypress/e2e/*.cy.js --headed",
+    "test_headed": "npx cypress run --spec cypress/e2e/*.cy.js --headed",
+    "test_headless": "npx cypress run --spec cypress/e2e/*cy.js --headless",
     "url_redirection_spec_file_chrome_headed": "npx cypress run --spec cypress/e2e/1_url_redirection_test.cy.js --headed chrome",
     "url_redirection_spec_file_chrome_headless": "npx cypress run --spec cypress/e2e/1_url_redirection_test.cy.js --headless chrome",
     "url_redirection_spec_file_firefox_headed": "npx cypress run --spec cypress/e2e/1_url_redirection_test.cy.js --headed firefox",
@@ -28,7 +29,15 @@
     "home_articles_spec_file_edge_headed": "npx cypress run --spec cypress/e2e/3_home_articles.cy.js --headed edge",
     "home_articles_spec_file_edge_headless": "npx cypress run --spec cypress/e2e/3_home_articles.cy.js --headless edge",
     "home_articles_spec_file_electron_headed": "npx cypress run --spec cypress/e2e/3_home_articles.cy.js --headed electron",
-    "home_articles_spec_file_electron_headless": "npx cypress run --spec cypress/e2e/3_home_articles.cy.js --headless electron"
+    "home_articles_spec_file_electron_headless": "npx cypress run --spec cypress/e2e/3_home_articles.cy.js --headless electron",
+    "footer_spec_file_chrome_headed": "npx cypress run --spec cypress/e2e/4_footer_test.cy.js --headed chrome",
+    "footer_spec_file_chrome_headless": "npx cypress run --spec cypress/e2e/4_footer_test.cy.js --headless chrome",
+    "footer_spec_file_firefox_headed": "npx cypress run --spec cypress/e2e/4_footer_test.cy.js --headed firefox",
+    "footer_spec_file_firefox_headless": "npx cypress run --spec cypress/e2e/4_footer_test.cy.js --headless firefox",
+    "footer_spec_file_edge_headed": "npx cypress run --spec cypress/e2e/4_footer_test.cy.js --headed edge",
+    "footer_spec_file_edge_headless": "npx cypress run --spec cypress/e2e/4_footer_test.cy.js --headless edge",
+    "footer_spec_file_electron_headed": "npx cypress run --spec cypress/e2e/4_footer_test.cy.js --headed electron",
+    "footer_spec_file_electron_headless": "npx cypress run --spec cypress/e2e/4_footer_test.cy.js --headless electron"
   },
   "author": "",
   "license": "ISC",
