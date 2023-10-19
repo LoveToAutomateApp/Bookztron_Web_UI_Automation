@@ -67,6 +67,7 @@ describe("Bookztron E2E Test", () => {
       .get_already_have_an_account_link()
       .should("not.have.attr", "target", "_blank");
     signup.get_already_have_an_account_link().click();
+    cy.wait(2000);
     cy.url().should("include", "/login");
   });
 
@@ -113,6 +114,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().should("be.enabled");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("not.include", "/login").and("include", "/signup");
   });
 
@@ -149,6 +151,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_password_field().type(user.sign_up_page_data.label_password);
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("not.include", "/login").and("include", "/signup");
   });
 
@@ -158,6 +161,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_password_field().type(user.sign_up_page_data.label_password);
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("not.include", "/login").and("include", "/signup");
   });
 
@@ -167,6 +171,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_password_field().type(user.sign_up_page_data.label_password);
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("not.include", "/login").and("include", "/signup");
   });
 
@@ -176,6 +181,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_password_field().type(user.sign_up_page_data.label_password);
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("not.include", "/login").and("include", "/signup");
   });
 
@@ -218,6 +224,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_password_field().type("a");
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("not.include", "/login").and("include", "/signup");
   });
 
@@ -227,6 +234,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_password_field().type("12345678@abcdefgh123");
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("not.include", "/login").and("include", "/signup");
   });
 
@@ -247,6 +255,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().should("be.enabled");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("include", "/login").and("not.include", "/signup");
   });
 
@@ -257,6 +266,7 @@ describe("Bookztron E2E Test", () => {
     signup.get_accept_terms_checkbox().check().should("be.checked");
     signup.get_create_an_account_submit_button().should("be.enabled");
     signup.get_create_an_account_submit_button().click();
+    cy.wait(2000);
     cy.url().should("not.include", "/login").and("include", "/signup");
   });
 });

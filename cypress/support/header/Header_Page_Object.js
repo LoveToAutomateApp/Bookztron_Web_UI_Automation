@@ -12,7 +12,7 @@ export default class Header_Page_Object {
       "pointer"
     );
     // should be wrapped within link tag
-    cy.get(user.header_elements.brand_heading).should("have.attr", "href");
+    cy.get(user.header_elements.brand_heading).should("exist");
     // link should not be empty
     cy.get(user.header_elements.brand_heading)
       .should("have.attr", "href")
@@ -21,17 +21,17 @@ export default class Header_Page_Object {
 
   login_link_validation() {
     //should be visible
-    cy.get(user.header_elements.login_link).should("be.visible");
+    cy.get(user.header_elements.login_or_logout_link).should("be.visible");
     //should display cursor as pointer
-    cy.get(user.header_elements.login_link).should(
+    cy.get(user.header_elements.login_or_logout_link).should(
       "have.css",
       "cursor",
       "pointer"
     );
     //should be wrapped within link tag
-    cy.get(user.header_elements.login_link).should("have.attr", "href");
+    cy.get(user.header_elements.login_or_logout_link).should("exist");
     //link should not be empty
-    cy.get(user.header_elements.login_link)
+    cy.get(user.header_elements.login_or_logout_link)
       .should("have.attr", "href")
       .should("not.be.empty");
   }
@@ -46,9 +46,9 @@ export default class Header_Page_Object {
       "pointer"
     );
     //should be wrapped within link tag
-    cy.get(user.header_elements.login_link).should("have.attr", "href");
+    cy.get(user.header_elements.shop_link).should("exist");
     //link value should not be empty
-    cy.get(user.header_elements.login_link)
+    cy.get(user.header_elements.shop_link)
       .should("have.attr", "href")
       .should("not.be.empty");
   }
@@ -63,7 +63,7 @@ export default class Header_Page_Object {
       "pointer"
     );
     //should be wrapped within link tag
-    cy.get(user.header_elements.wishlist_link).should("have.attr", "href");
+    cy.get(user.header_elements.wishlist_link).should("exist");
     //link value should not be empty
     cy.get(user.header_elements.wishlist_link)
       .should("have.attr", "href")
@@ -80,7 +80,7 @@ export default class Header_Page_Object {
       "pointer"
     );
     //should be wrapped within link tag
-    cy.get(user.header_elements.cart_link).should("have.attr", "href");
+    cy.get(user.header_elements.cart_link).should("exist");
     //link value should not be empty
     cy.get(user.header_elements.cart_link)
       .should("have.attr", "href")
@@ -97,7 +97,7 @@ export default class Header_Page_Object {
       "pointer"
     );
     //should be wrapped within link tag
-    cy.get(user.header_elements.order_link).should("have.attr", "href");
+    cy.get(user.header_elements.order_link).should("exist");
     //link value should not be empty
     cy.get(user.header_elements.order_link)
       .should("have.attr", "href")
@@ -117,7 +117,7 @@ export default class Header_Page_Object {
   }
 
   login_link() {
-    return cy.get(user.header_elements.login_link);
+    return cy.get(user.header_elements.login_or_logout_link);
   }
 
   login_url_validation() {
