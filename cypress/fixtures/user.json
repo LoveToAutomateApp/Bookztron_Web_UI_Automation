@@ -18,7 +18,8 @@
     "linkedin_url": "https://www.linkedin.com/in/naman-saxena-5460b3188/",
     "github_url": "https://github.com/Naman-Saxena1",
     "twitter_url": "https://twitter.com/NamanSa83962307?s=08",
-    "instagram_url": "https://www.instagram.com/naman_saxena98/"
+    "instagram_url": "https://www.instagram.com/naman_saxena98/",
+    "sign_up_url": "http://localhost:3000/signup"
   },
 
   "header_elements": {
@@ -131,6 +132,25 @@
     "label_romance": "Romance",
     "label_manga": "Manga",
     "label_default": "default"
+  },
+
+  "sign_up_page_elements": {
+    "create_new_account_button": "div#root > div > div.user-auth-content-container > form > button",
+    "name_field": "div#root > div > div.user-auth-content-container > form > div > input#user-auth-input-name",
+    "email_field": "div#root > div > div.user-auth-content-container > form > div > input#user-auth-input-email",
+    "password_field": "div#root > div > div.user-auth-content-container > form > div > input#user-auth-input-password",
+    "accept_terms_checkbox": "div#root > div > div.user-auth-content-container > form > div > input#accept-terms",
+    "already_have_an_account_link": "div#root > div > div.user-auth-content-container > form > div > a#existing-user-link",
+    "toaster_message": "div.toasts-container.bottom-right > div > div"
+  },
+
+  "sign_up_page_data": {
+    "label_create_new_account_button": "Create New Account",
+    "label_I_accept_terms_and_conditions": "I accept all terms and conditions",
+    "label_already_have_an_account": "Already have an account",
+    "label_name": "Rushi",
+    "label_email": "rss123@gmail.com",
+    "label_password": "rss@123"
   },
 
   "sign_in_page_elements": {
